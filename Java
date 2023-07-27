@@ -1,0 +1,35 @@
+public class LinkedListPractice {
+
+	public static void main(String[] args) {
+		//we can access both list and Queue/Deque
+		ArrayList<String> al = new ArrayList<>();
+		al.add("S1");
+		al.add("S2");
+		LinkedList<String> ll = new LinkedList<>();
+		//it is not synchroniced it will start dealing with multiple data at a time 
+		Collections.synchronizedList(ll);
+		//Only we can access list below, ll is a list type of object
+		//List<Integer> ll = new LinkedList<>();
+		//Queue<Integer> ll = new LinkedList<>();
+		//Collection<Integer> ll = new LinkedList<>();
+		//Iterable<Integer> ll = new LinkedList<>();
+		ll.add("Y1");
+		ll.add("Y2");
+		ll.add("Y3");
+		ll.add(1,"YY");
+		//ll.addAll(al);
+		ll.addAll(0, al);
+		//if we not mention index it will remove head first data (1) not 0
+		//ll.remove();
+		//ll.remove("YY");
+		//ll.clear();
+		//ll.removeAll(al);
+		//Update
+		ll.set(2, "YY1");
+		System.out.println(ll);
+		System.out.println(ll.get(4));
+		System.out.println(ll.contains("YY"));
+
+	}
+
+}
